@@ -1,0 +1,41 @@
+  <% include ./components/header %>
+
+  <main>
+    <form method="post" action="/boodschappenlijstje">
+      <header>
+        <h1>Boodschappen Lijstje</h1>
+      </header>
+      <section class="lijstje-container">
+        <label for="broodsoort">Brood</label>
+        <select id="broodsoort" name="broodsoort">
+          <% for (const i in lijst.broodsoort) { %>
+              <option value="<%= lijst.broodsoort[i].name %> <%= lijst.broodsoort[i].price %>" name="<%= lijst.broodsoort[i].name %>"><%= lijst.broodsoort[i].name %> <%= lijst.broodsoort[i].price %></option>
+        <%  } %>
+        </select>
+
+        <label for="kaassoort">Kaas</label>
+        <select id="kaassoort" name="kaassoort">
+          <% for (const i in lijst.kaassoort) { %>
+              <option value="<%= lijst.kaassoort[i].name %> <%= lijst.kaassoort[i].price %>" name="<%= lijst.kaassoort[i].name %>"><%= lijst.kaassoort[i].name %> <%= lijst.kaassoort[i].price %></option>
+        <%  } %>
+        </select>
+
+        <label for="extra">Extra</label>
+        <select id="extra" name="extra">
+          <% for (const i in lijst.extra) { %>
+              <option value="<%= lijst.extra[i].name %> <%= lijst.extra[i].price %>" name="<%= lijst.extra[i].name %>"><%= lijst.extra[i].name %> <%= lijst.extra[i].price %></option>
+        <%  } %>
+        </select>
+
+        <label for="saussoort">Saus</label>
+        <select id="saussoort" name="saussoort">
+          <% for (const i in lijst.saussoort) { %>
+              <option value="<%= lijst.saussoort[i].name %> <%= lijst.saussoort[i].price %>" name="<%= lijst.saussoort[i].name %>"><%= lijst.saussoort[i].name %> <%= lijst.saussoort[i].price %></option>
+        <%  } %>
+        </select>
+        <input type="submit" class="button" value="Maak je lijstje"></input>
+      </section>
+    </form>
+  </main>
+
+  <% include ./components/footer %>

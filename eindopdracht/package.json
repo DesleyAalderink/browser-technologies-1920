@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.2",
+    "express": "^4.17.1",
+    "npm": "^6.13.0",
+    "twitter": "^1.7.1"
+  },
+  "version": ""
+}
